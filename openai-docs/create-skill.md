@@ -164,6 +164,8 @@ Check out more example skills and ideas in the [github.com/openai/skills](https:
 
 If a skill doesn’t show up in Codex, make sure you enabled skills and restarted Codex. Confirm the file name is exactly `SKILL.md` and that it lives under a supported path such as `~/.codex/skills`.
 
+If you’ve disabled a skill in `~/.codex/config.toml`, remove or flip the matching `[[skills.config]]` entry and restart Codex.
+
 If you use symlinked directories, confirm the symlink target exists and is readable. Codex also skips skills with malformed YAML or `name`/`description` fields that exceed the length limits.
 
 ### Skill doesn’t trigger

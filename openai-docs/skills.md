@@ -84,6 +84,16 @@ When Codex loads available skills from these locations, it overwrites skills wit
 
 Codex supports symlinked skill folders and follows the symlink target when scanning these locations.
 
+## Enable or disable skills
+
+Per-skill enablement in `~/.codex/config.toml` is experimental and may change as needed. Use `[[skills.config]]` entries to disable a skill without deleting it, then restart Codex:
+
+```toml
+[[skills.config]]
+path = "/path/to/skill"
+enabled = false
+```
+
 ## Create a skill
 
 To create a new skill, use the built-in `$skill-creator` skill in Codex. Describe what you want your skill to do, and Codex will start bootstrapping your skill.
